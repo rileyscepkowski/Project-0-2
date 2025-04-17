@@ -13,6 +13,16 @@ def print_vehicles ():
  for vehicle in AllowedVehiclesList:
   print(vehicle)
 
+# Function to search for a specific vehicle
+def search_vehicle():
+  print("Please Enter the full Vehicle name:")
+  search_query = input().strip()
+
+  if search_query in AllowedVehiclesList:
+    print(f"{search_query} is an authorized vehicle.")
+  else:
+    print(f"{search_query} is not an authorized vehicle, if you received this in error please check the spelling and try again")
+
 # Function to display the menu and get user input
 def display_menu():
     print("********************************")
@@ -20,7 +30,10 @@ def display_menu():
     print("********************************")
     print("Please Enter the following number below from the following menu:")
     print("1. PRINT all Authorized Vehicles")
-    print("2. Exit")
+    print("2. SEARCH for Authorized Vehicle")
+    print("3. Exit")
+    print("********************************")
+    
 
 # Main Program Function
 def main():
