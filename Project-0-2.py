@@ -33,7 +33,7 @@ def display_menu():
     print("2. SEARCH for Authorized Vehicle")
     print("3. Exit")
     print("********************************")
-    
+
 
 # Main Program Function
 def main():
@@ -44,11 +44,12 @@ def main():
     if user_choice == '1':
       print_vehicles()
     elif user_choice == '2':
-      print("Thank you for using the AutoCountry Vehicle Finder, good-bye!") # exit message
-      break # close program
-
+      search_vehicle()
+    elif user_choice == '3':
+      print("Thank you for using AutoCountry Vehicle Finder, goodbye!")
+      break # end else/if loops
     else:
-        print("Invalid choice, please try again.") # invalid input message
+      print("Invalid choice, please try again.")
 
 if __name__ == "__main__":
     main() # run the main function
